@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Content Approval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./panel.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Content Approval</h1>
+      <p class="muted">Multi-stage editorial approval with roles, comments and publish gating for CMS items.</p>
+    </header>
+
+    <section class="card" id="connect" hidden>
+      <h2>Connect</h2>
+      <p class="muted">Paste the Site ID and token (the owner token shown after installation, or the personal token the owner issued to you).</p>
+      <div class="row">
+        <input id="conn-site" placeholder="Site ID" />
+        <input id="conn-token" type="password" placeholder="Token" />
+        <button id="conn-save" class="btn primary">Connect</button>
+      </div>
+    </section>
+
+    <div id="main" hidden>
+      <div class="row space">
+        <span id="whoami" class="muted"></span>
+        <button id="disconnect" class="btn small">Disconnect</button>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="board">Board</button>
+        <button class="tab" data-tab="reviews">Reviews</button>
+        <button class="tab owner-only" data-tab="workflows">Workflows</button>
+        <button class="tab owner-only" data-tab="team">Team</button>
+        <button class="tab" data-tab="audit">Audit</button>
+      </nav>
+      <section id="view"></section>
+    </div>
+    <div id="toast" class="toast" hidden></div>
+  </div>
+  <script src="./panel.js"></script>
+</body>
+</html>

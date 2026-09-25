@@ -1,0 +1,8 @@
+{
+  "name": "content-approval-webflow",
+  "displayName": "Content Approval",
+  "apiVersion": "2",
+  "size": "large",
+  "entrypoint": "index.html",
+  "publicDir": "dist"
+}
